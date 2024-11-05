@@ -1,0 +1,17 @@
+@mixin button-blue($padding) {
+  font-size: clamp(1.2rem, 1rem + 0.5vw, 1.6rem);
+  border: 0;
+  background-color: $color-blue;
+  border-radius: $button-blue-radius;
+  line-height: 2.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $color-white;
+  padding: $padding;
+  transition: 0.3s background-color linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-blue-hover;
+  }
+}

@@ -1,0 +1,48 @@
+.footer {
+  padding-top: 5rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  &__links {
+    max-width: 15rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+  }
+
+  @media (width < 686px) {
+    display: none;
+  }
+}
+
+.footer__link {
+  color: $color-gray;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+
+  &--title {
+    color: $color-white;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  &--about {
+    display: inline-block;
+    color: $color-gray;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+
+.margin {
+  margin-top: 1.2rem;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  margin: 8.3rem 0 6rem 0;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+}

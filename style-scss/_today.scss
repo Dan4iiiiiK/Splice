@@ -1,0 +1,30 @@
+.today {
+  background: url(../image/start-bg.png) center / cover no-repeat;
+  max-width: 120rem;
+  margin: 0 auto;
+  height: 72.8rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+
+  &__title {
+    font-size: clamp(4rem, 3.3rem + 1.75vw, 5.4rem);
+    font-weight: 400;
+    margin-bottom: 6rem;
+  }
+
+  &__button {
+    @include button-blue(0.8rem 2rem);
+
+    @media (width < 686px) {
+      width: 100%;
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  @media (width < 686px) {
+    height: 45rem;
+  }
+}

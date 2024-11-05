@@ -1,0 +1,49 @@
+.producer {
+  background: url("../image/main-image.png") center / cover no-repeat;
+  min-height: 74.4rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5.4rem;
+  margin-bottom: 9.6rem;
+
+  &__title {
+    font-size: clamp(3rem, 0.9rem + 5.25vw, 7.2rem);
+    letter-spacing: 1.08px;
+    font-weight: 400;
+    max-width: 51.3rem;
+    margin-bottom: 2rem;
+
+    @media (width < 686px) {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    font-size: clamp(1.4rem, 1.1rem + 0.75vw, 2rem);
+    max-width: 41.2rem;
+    margin-bottom: 4.4rem;
+
+    @media (width < 686px) {
+      max-width: 100%;
+    }
+  }
+
+  &__button {
+    @include button-blue(1.6rem 3.2rem);
+    max-width: 12.5rem;
+
+    @media (width < 686px) {
+      max-width: 100%;
+    }
+  }
+
+  @media (width < 686px) {
+    padding: 0 1.5rem;
+    min-height: 40rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}

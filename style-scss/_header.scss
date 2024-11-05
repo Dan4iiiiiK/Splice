@@ -1,0 +1,150 @@
+.header {
+  padding: 2rem 0;
+
+  &__contianer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (width < 784px) {
+      justify-content: center;
+      row-gap: 2rem;
+    }
+
+    @media (width < 630px) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.header__menu {
+  display: flex;
+  column-gap: 2.9rem;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+
+  @media (width < 630px) {
+    display: none;
+  }
+}
+
+.menu__link {
+  color: $color-gray;
+  transition: 0.3s color linear;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-color: $color-dark-white;
+    width: 0.6rem;
+    height: 0.6rem;
+    top: 7px;
+    left: -12px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(100%);
+    transition-duration: 0.3s;
+    transition-property: opacity, transform;
+    transition-timing-function: linear;
+  }
+
+  &:hover {
+    color: $color-dark-white;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header__logins {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+
+  &-login {
+    border: 0;
+    background-color: inherit;
+    color: $color-gray;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s color linear;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+    &:hover {
+      color: $color-dark-white;
+    }
+  }
+
+  &-sign {
+    background-color: $color-white;
+    color: $color-black;
+    border-radius: 32px;
+    padding: 0.8rem 2.1rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition-duration: 0.3s;
+    transition-property: background-color, box-shadow;
+    transition-timing-function: linear;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+    &:hover {
+      background-color: $color-dark-white;
+      -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+      -moz-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2);
+    }
+
+    &::selection {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+}
+
+.nav__link-logo {
+  display: inline-block;
+  width: 9.7rem;
+  height: 3rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.burger {
+  display: none;
+  width: 3rem;
+  display: none;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  background-color: inherit;
+  border: 0;
+  cursor: pointer;
+
+  span {
+    width: 100%;
+    height: 0.3rem;
+    background-color: $color-white;
+    border-radius: 1.6rem;
+    display: inline-block;
+  }
+
+  @media (width < 630px) {
+    display: flex;
+  }
+}
