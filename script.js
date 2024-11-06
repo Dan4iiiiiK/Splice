@@ -14,7 +14,7 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
-document.querySelector(".menu__link").forEach((el) => {
+document.querySelectorAll(".menu__link").forEach((el) => {
   el.addEventListener("click", () => {
     burger.classList.remove("active");
     menu.classList.remove("active");
