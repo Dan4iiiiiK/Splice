@@ -221,9 +221,6 @@ ul {
   cursor: pointer;
   transition: 0.4s all linear;
 }
-.burger:hover span {
-  background-color: #a6a8ad;
-}
 .burger span {
   width: 100%;
   height: 0.3rem;

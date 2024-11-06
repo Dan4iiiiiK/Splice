@@ -163,10 +163,6 @@
   cursor: pointer;
   transition: 0.4s all linear;
 
-  &:hover span {
-    background-color: $color-gray;
-  }
-
   span {
     width: 100%;
     height: 0.3rem;
