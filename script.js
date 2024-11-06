@@ -14,10 +14,10 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
-document.querySelectorAll(".menu__link").forEach((el) => {
-  el.addEventListener("click", () => {
+menu.addEventListener("click", (event) => {
+  if (event.target.classList.contains("menu__link")) {
     burger.classList.remove("active");
     menu.classList.remove("active");
     overlay.classList.remove("active");
-  });
+  }
 });
