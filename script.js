@@ -13,3 +13,11 @@ overlay.addEventListener("click", () => {
   menu.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+document.querySelector(".menu__link").forEach((el) => {
+  el.addEventListener("click", () => {
+    burger.classList.remove("active");
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
